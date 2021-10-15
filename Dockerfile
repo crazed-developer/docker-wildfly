@@ -2,10 +2,10 @@
 # https://github.com/jboss-dockerfiles/wildfly
 
 # Build with this command:
-# docker build -t cecotto/wildfly:25b01 .
+# docker build -t cecotto/wildfly:25b02 .
 
 # Push image
-# docker push cecotto/wildfly:25b01
+# docker push cecotto/wildfly:25b02
 
 # Run container into bash
 # docker run -p 8080:8080 --name test -it [ImageID]
