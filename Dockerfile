@@ -2,10 +2,10 @@
 # https://github.com/jboss-dockerfiles/wildfly
 
 # Build with this command:
-# docker build -t cecotto/wildfly:25 .
+# docker build -t cecotto/wildfly:25b01 .
 
 # Push image
-# docker push cecotto/wildfly:25
+# docker push cecotto/wildfly:25b01
 
 # Run container into bash
 # docker run -p 8080:8080 --name test -it [ImageID]
@@ -67,4 +67,4 @@ EXPOSE 8080
 
 # Set the default command to run on boot
 # This will boot WildFly in standalone mode and bind to all interfaces
-CMD ["/opt/jboss/wildfly/bin/standalone.sh", "-b", "0.0.0.0"]
+CMD ["/opt/jboss/wildfly/bin/standalone.sh", "-b", "0.0.0.0", "-bmanagement", "0.0.0.0"]
