@@ -6,7 +6,7 @@
 # docker build -t cecotto/wildfly:25-jdk17-b01 .
 
 # Push image
-# docker push cecotto/wildfly:25-jdk17-b01
+# docker push cecotto/wildfly:26-jdk17-b01
 
 # Run container into bash
 # docker run -p 8080:8080 --name test -it [ImageID]
