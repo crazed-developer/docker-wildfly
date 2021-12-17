@@ -2,18 +2,18 @@
 # https://github.com/jboss-dockerfiles/wildfly
 
 # Build with this command:
-# docker build -t cecotto/wildfly:25-jdk16-b01 .
+# docker build -t cecotto/wildfly:25-jdk16-b02 .
+# docker build -t cecotto/wildfly:25-jdk17-b01 .
 
 # Push image
-# docker push cecotto/wildfly:25-jdk16-b01
+# docker push cecotto/wildfly:25-jdk17-b01
 
 # Run container into bash
 # docker run -p 8080:8080 --name test -it [ImageID]
 
 # Login to container:
 # docker exec -ti -u root [ContainerID] /bin/bash
-
-FROM eclipse-temurin:16.0.2_7-jdk-focal
+FROM eclipse-temurin:17.0.1_12-jdk-focal
 
 run apt-get update && apt-get install -y locales && rm -rf /var/lib/apt/lists/* \
     && localedef -i en_DK -c -f UTF-8 -A /usr/share/locale/locale.alias en_DK.UTF-8
@@ -33,8 +33,8 @@ WORKDIR /opt/jboss
 USER jboss
 
 # Set the WILDFLY_VERSION env variable
-ENV WILDFLY_VERSION 25.0.0.Final
-ENV WILDFLY_SHA1 238e67f48f1bd1e79f2d845cba9194dcd54b4d89
+ENV WILDFLY_VERSION 26.0.0.Final
+ENV WILDFLY_SHA1 836fdefc48b6008904b91b43e00bf6ee6d917486
 ENV JBOSS_HOME /opt/jboss/wildfly
 
 USER root
